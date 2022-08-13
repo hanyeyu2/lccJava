@@ -1,6 +1,6 @@
 package HW0807;
 import java.util.Scanner;
-public class HW0807_02 extends HW0807.HW0807_01 {
+public class HW0807_02 extends HW0807_01 {
 	
 	public static double Fibonacci02(int n) {
 		return(double) Fibonacci(n+1)/Fibonacci(n);
