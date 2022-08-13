@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class HW0807_02 extends HW0807.HW0807_01 {
 	
 	public static double Fibonacci02(int n) {
-	    double z = (double) double z = (double) Fibonacci(n+1)/Fibonacci(n);;
-		return z;
+		return (double) double z = (double) Fibonacci(n+1)/Fibonacci(n);
 	}
 	public static void main(String[] args) {
 		Scanner scan=new Scanner(System.in);
