@@ -16,7 +16,7 @@ public class HW0807_01 {
 		System.out.println("請輸入第幾個月，來顯示目前兔子總數");
 		int m=scan.nextInt();
 		for(int i =1;i<=m;i++) {
-			System.out.print(Fibonacci(i+1)+"/"+Fibonacci(i)+",");
+			System.out.print(Fibonacci(i)+",");
 		}
 		
 		
