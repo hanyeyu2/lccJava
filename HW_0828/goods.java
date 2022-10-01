@@ -3,20 +3,16 @@ package HW_0828;
 import java.util.*;
 import java.util.jar.Attributes.Name;
 
+import javax.annotation.processing.RoundEnvironment;
 import javax.swing.plaf.multi.MultiInternalFrameUI;
-
 public class goods {
 	// 產品
 	Vector goods = new Vector();
-	private HashMap<String, String> name = new HashMap<>();
-	private HashMap<String, Integer> quality = new HashMap<>();
-	private HashMap<String, Integer> purchase = new HashMap<>();
-	private HashMap<String, Integer> selling = new HashMap<>();
-	// 顧客
-	Vector customerList = new Vector<>();
-	HashMap shop = new HashMap<>();
-	private HashMap<String, Integer> shopCar = new HashMap<>();
-	private HashMap<String, String> PNO = new HashMap<>();
+	HashMap<String, String> name = new HashMap<>();
+	HashMap<String, Integer> quality = new HashMap<>();
+	HashMap<String, Integer> purchase = new HashMap<>();
+	HashMap<String, Integer> selling = new HashMap<>();
+	
 
 	// 基礎產品
 	void basel() {
@@ -99,21 +95,47 @@ public class goods {
 		return (int) (Math.round(qual * price));
 
 	}
+	
+	//顧客
+		
+	
+	/*void shopCar(String member,int goodsa,int qua) {
+		String purchasNum=String.valueOf(Math.random()*10000);
+		String goodS=(String)goods.get(goodsa-1);
+		int price=selling.get(goodS);
+		int qu=Math.round(qua*price);
+		int total;
+		qu=qua;
+		int  q =quality.get(goodS)+qua;
+		quality.replace(goodS, q);
+		System.out.println("客戶代號"+member+"產品");
+	}*/
 
-	void showCar() {
-	}
-
-	void Car(String name, int qua) {
-	}
-
-	void Pno() {
-	}
 public static void main(String[] args) {
+	
 	goods g=new goods();
 	g.basel();
 	g.showdatabase();
-	g.stuck("舒跑",20);
-	g.replaceP("舒跑", 30);
+	//shopCar sCar=new shopCar("M0001",1, 2);
+	//String goodS=(String) g.goods.get(1-1);
 	g.showdatabase();
 }
+
+/*class shopCar{
+	goods nGoods=new goods();
+	String purchasNum;
+	String goodS;
+	int qua;
+	int price;
+	int total;
+	shopCar(String member,int goodsa,int qua)
+	{	nGoods.basel();
+		this.goodS=(String)nGoods.goods.get(goodsa-1);
+		this.qua=qua;
+		this.purchasNum=String.valueOf(Math.random()*10000);
+		this.price=nGoods.selling.get(goodS);
+		this.total=Math.round(qua*price);
+		int  q =nGoods.quality.get(goodS)+qua;
+		nGoods.quality.replace(goodS, q);
+	}*/
 }

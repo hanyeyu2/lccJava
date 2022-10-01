@@ -17,8 +17,8 @@ public class staff extends goods implements choose {
 			String name = scan.next();
 			if (goods.indexOf(name) >= 0) {
 				System.out.println("此產品已存在\n\t1.重新輸入\n\t2.返回上一層");
-				int i = scan.nextInt();
-				if (i == 1) {
+				int L1i = scan.nextInt();
+				if (L1i == 1) {
 					chooseL1();
 				} else {
 					display();
@@ -31,8 +31,8 @@ public class staff extends goods implements choose {
 				addnew(name, supplier, quan, price);
 				showdatabase();
 				System.out.println("請問要1.繼續2.返回上一層？");
-				int i = scan.nextInt();
-				if (i== 1) {
+				int R1i = scan.nextInt();
+				if (R1i== 1) {
 					chooseL1();
 				} else {
 					display();
@@ -53,8 +53,8 @@ public class staff extends goods implements choose {
 			String name = scan.next();
 			if (goods.indexOf(name) < 0) {
 				System.out.println("此產品不存在\n\t1.重新輸入\n\t2.返回上一層");
-				int i = scan.nextInt();
-				if (i == 1) {
+				int L2i = scan.nextInt();
+				if (L2i == 1) {
 					chooseL2();
 				} else {
 					display();
@@ -65,8 +65,8 @@ public class staff extends goods implements choose {
 				stuck(name, quan);
 				showdatabase();
 				System.out.println("請問要1.繼續2.返回上一層？");
-				int i = scan.nextInt();
-				if (i == 1) {
+				int R2i = scan.nextInt();
+				if (R2i == 1) {
 					chooseL2();
 				} else {
 					display();
@@ -85,8 +85,8 @@ public class staff extends goods implements choose {
 			String name = scan.next();
 			if (goods.indexOf(name) < 0) {
 				System.out.println("此產品不存在\n\t1.重新輸入\n\t2.返回上一層");
-				int i = scan.nextInt();
-				if (i == 1) {
+				int L3i = scan.nextInt();
+				if (L3i == 1) {
 					chooseL3();
 				} else {
 					display();
@@ -97,8 +97,8 @@ public class staff extends goods implements choose {
 				replaceP(name, price);
 				showdatabase();
 				System.out.println("請問要1.繼續2.返回上一層？");
-				int i = scan.nextInt();
-				if (i == 1) {
+				int R3i = scan.nextInt();
+				if (R3i == 1) {
 					chooseL3();
 				} else {
 					display();
@@ -114,14 +114,13 @@ public class staff extends goods implements choose {
 	void chooseL4() {
 		showdatabase();
 		System.out.println("1.返回上一層");
-		int i = scan.nextInt();
-		if (i == 1) {
+		int L4i = scan.nextInt();
+		if (L4i == 1) {
 			display();
 		}
 	}
 
 	void display() {
-		basel();
 		System.out.println("1.新增資料\n2.新增庫存\n3.更改進價\n4.查看資料");
 		try {
 			int s = scan.nextInt();
@@ -157,6 +156,7 @@ public class staff extends goods implements choose {
 
 	// 員工代號
 	public void login() {
+		basel();
 		bsel();
 		System.out.println("請輸入員工代號");
 		try {
